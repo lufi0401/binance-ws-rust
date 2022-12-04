@@ -118,7 +118,8 @@ async fn run_bnce() -> Result<()> {
 
 #[tokio::main]
 async fn main() {
-    env_logger::init();
+    // env_logger::init();
+    log4rs::init_file("config/log4rs.yml", Default::default()).unwrap();
     println!("Hello");
     info!("Hello");
 
